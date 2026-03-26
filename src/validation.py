@@ -4,6 +4,8 @@ def getOption (option):
             print(f"{i} - {option}")
         try :
             seletedOption = int(input("please, select an option: "))
-            return seletedOption, option[seletedOption-1]
+            return seletedOption
         except ValueError:
             print ("Select a valid option")
+
+
