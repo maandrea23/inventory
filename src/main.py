@@ -1,6 +1,6 @@
 from validation import getOption
 from menu import menu
-from validation import choose
+from services import choose
 
 print ("Welcome to the inventory")
 ToDo= getOption(menu)

@@ -1,7 +1,4 @@
-from validation import choose
-from main import ToDo
 
-choose(ToDo)
 def choose (c1):
 
 

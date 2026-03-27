@@ -1,6 +1,6 @@
-def getOption (option):
+def getOption (options):
     while True:
-        for i, option in enumerate (option,start=1):
+        for i, option in enumerate(options,start=1):
             print(f"{i} - {option}")
         try :
             seletedOption = int(input("please, select an option: "))
