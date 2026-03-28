@@ -12,7 +12,7 @@ def show_inventory(inventory_list):
     if not inventory_list:
         print("Inventory is empty.")
         return
-    print("\\n--- INVENTORY ---")
+    print("\n--- INVENTORY ---")
     for p in inventory_list:
         print(f"Product: {p['name']} | Price: {p['price']} | Quantity: {p['quantity']}")
     print("-----------------")
@@ -48,9 +48,8 @@ def calculate_statistics(inventory_list):
     if not inventory_list:
         print("No products for statistics.")
         return {}
-    subtotal = lambda p: p["price"] * p["quantity"]
     total_units = sum(p["quantity"] for p in inventory_list)
-    total_value = sum(subtotal(p) for p in inventory_list)
+    total_value = sum(p["price"] * p["quantity"] for p in inventory_list)
     most_expensive = max(inventory_list, key=lambda p: p["price"])
     highest_stock = max(inventory_list, key=lambda p: p["quantity"])
     stats = {
@@ -59,7 +58,7 @@ def calculate_statistics(inventory_list):
         'most_expensive': (most_expensive['name'], most_expensive['price']),
         'highest_stock': (highest_stock['name'], highest_stock['quantity'])
     }
-    print(f"\\n--- STATISTICS ---")
+    print(f"\n--- STATISTICS ---")
     print(f"Total units: {total_units}")
     print(f"Total value: {total_value}")
     print(f"Most expensive: {most_expensive['name']} (${most_expensive['price']})")
@@ -105,7 +104,6 @@ def choose(option, inventory_list):
         else:
             print("Invalid option.")
     except KeyboardInterrupt:
-        print("\\nExiting...")
+        print("\nExiting...")
     except Exception as e:
         print(f"Operation error: {str(e)}. Back to menu.")
-
