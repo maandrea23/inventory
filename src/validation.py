@@ -1,11 +1,13 @@
-def getOption (options):
+# Menu option validation
+def getOption(options):
     while True:
-        for i, option in enumerate(options,start=1):
+        for i, option in enumerate(options, start=1):
             print(f"{i} - {option}")
-        try :
-            seletedOption = int(input("please, select an option: "))
-            return seletedOption
+        try:
+            sel = int(input("Select option (1-9): "))
+            if 1 <= sel <= 9:
+                return sel
+            print("Please choose 1-9.")
         except ValueError:
-            print ("Select a valid option")
-
+            print("Enter a valid number.")
 
