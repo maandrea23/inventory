@@ -7,6 +7,8 @@ Command-line inventory management for small business/product owners:
 - **Advanced Stats**: Total units/value, most expensive item, highest stock.
 - **CSV Persistence**: Save/load data, validate imports, merge/overwrite with error handling.
 
+## How to use 
+If is your first time logging in, keep in mind that after all products are added to the inventory, have to be saved in a .csv file. When you close the program and log back in, you will need to upload the saved file and perform a merge or overwrite if  you want continue editing.
 
 ## Requirements
 - **Python 3.8+** (stdlib only: csv, lambda).
